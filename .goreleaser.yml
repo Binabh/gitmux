@@ -34,7 +34,7 @@ changelog:
 
 brews:
   - name: gitmux
-    homepage: "https://github.com/arl/gitmux"
+    homepage: "https://github.com/binabh/gitmux"
     description: "Git in your tmux status bar."
     license: "MIT"
     url_template: "https://github.com/arl/gitmux/releases/download/{{ .Tag }}/{{ .ArtifactName }}"

@@ -1,4 +1,4 @@
-module github.com/arl/gitmux
+module github.com/binabh/gitmux
 
 go 1.20
 
