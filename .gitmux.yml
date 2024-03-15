@@ -83,3 +83,5 @@ tmux:
         hide_clean: false
         # Swaps order of behind & ahead upstream counts - "↓·1↑·1" -> "↑·1↓·1"
         swap_divergence: false
+        # Reset to default colors when tmux status bar is cleared.
+        should_reset_colors: true

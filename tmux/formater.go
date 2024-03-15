@@ -90,6 +90,7 @@ type options struct {
 	Ellipsis       string    `yaml:"ellipsis"`
 	HideClean      bool      `yaml:"hide_clean"`
 	SwapDivergence bool      `yaml:"swap_divergence"`
+	ShouldResetColors    bool      `yaml:"should_reset_colors"`
 }
 
 // A Formater formats git status to a tmux style string.
@@ -196,7 +197,10 @@ func (f *Formater) format() string {
 
 	// Reset foreground and background styles to default, since there could be
 	// successive elements in user tmux status strings.
-	sb.WriteString(resetStyles)
+	var shouldReset = f.Options.ShouldResetColors;
+	if shouldReset {
+		sb.WriteString(resetStyles)
+	}
 	return sb.String()
 }
 
